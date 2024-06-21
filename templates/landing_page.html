@@ -1,213 +1,61 @@
-<!doctype html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Web App Landing Page Website Tempalte | Smarteyeapps.com</title>
-    <link rel="shortcut icon" href="assets/images/fav.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
-    <link rel="shortcut icon" href="assets/images/fav.jpg">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/fontawsom-all.min.css">
-    <link rel="stylesheet" href="static/plugins/owl/owl.carousel.min.css">
-      <link rel="stylesheet" href="static/plugins/owl/owl.theme.css">
-    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
-</head>
+{% load static %}
 
-<body>
-    <!--*************** Header Starts Here ***************-->
-      <header id="menu-jk" class="container-fluid">
-          <div class="container">
-              <div class="row">
-                   <div class="col-lg-3 col-md-12 logo">
-                       <img class="white" src="static/images/logo.png" alt="">
-                       <img class="gray" src="static/images/logo-gray.png" alt="">
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/landing_page.css' %}">
+{% endblock %}
 
-                       <a class="small-menu" class="d-lg-none" data-toggle="collapse" data-target="#menu" href="#menu" >
-                           <i  class="fas d-lg-none fa-bars"></i>
-                      </a>
-                   </div>
-                   <div id="menu" class="col-lg-9 d-none d-lg-block navigation">
-                       <ul>
-                           <li><a href="#">Home</a></li>
-                           <li><a href="#features">Features</a></li>
-                           <li><a href="#generic_price_table">Pricing</a></li>
-                           <li><a href="#gallery">Gallery</a></li>
-                           <li><a href="#contact">Contact Us</a></li>
-                       </ul>
-                   </div>
-              </div>
-          </div>
-      </header>
-
-      <!--*************** Slider Starts Here ***************-->
-      <div class="slider container-fluid">
-          <div class="container">
-              <div class="row">
-
-                <div data-aos="fade-left" class="col-md-7 text-part">
-                    <h1>Cadastre-se agora e junte-se à nossa comunidade</h1>
-                        <p>Bem-vindo ao Passe Fácil! Nossa plataforma é a sua melhor amiga 
-                           quando se trata de desbloquear seu passe estudantil , Somos feitos para estudantes como você, que precisam 
-                           de um jeito fácil e rápido para garantir o transporte e acessar serviços 
-                           essenciais. Com o Passe Fácil, você pode gerenciar tudo isso de maneira
-                            simples e sem complicações. Não perca tempo, cadastre-se agora e veja como
-                    </h1>         é fácil fazer parte da nossa comunidade incrível!</p>
-                
-                    <div class="down-row">
-                        <a href="login.html" class="btn">Iniciar Sessão</a>
-                        <a href="register.html" class="btn">Registro</a>
-                    </div>
+{% block content %}
+<div class="slider container-fluid">
+    <div class="container">
+        <div class="row">
+            <div data-aos="fade-left" class="col-md-7 text-part">
+                <h1>Cadastre-se agora e junte-se à nossa comunidade</h1>
+                <p>Bem-vindo ao Passe Fácil! Nossa plataforma é a sua melhor amiga quando se trata de desbloquear seu passe estudantil. Somos feitos para estudantes como você, que precisam de um jeito fácil e rápido para garantir o transporte e acessar serviços essenciais. Com o Passe Fácil, você pode gerenciar tudo isso de maneira simples e sem complicações. Não perca tempo, cadastre-se agora e veja como é fácil fazer parte da nossa comunidade incrível!</p>
+                <div class="down-row">
+                    <a href="login.html" class="btn">Iniciar Sessão</a>
+                    <a href="register.html" class="btn">Registro</a>
                 </div>
-                
-                   <div data-aos="fade-right"  class="col-md-5 image-part">
-                        <img src="static/images/slider-image.png" alt="">
-                   </div>
-              </div>
-          </div>
-      </div>
-
-      <!--*************** Features Starts Here ***************-->
-      <section id="features" class="features container-fluid">
-        <div class="container">
-            <div class="row session-title">
-                <h2>Funcionalidades do Passe Fácil</h2>
-                <p>Conheça as vantagens que o Passe Fácil oferece para facilitar sua vida estudantil.</p>
             </div>
-            <div class="row feature-row">
-                <div class="col-md-4">
-                    <div class="feature-col">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <h4>Geração de Senha Automática</h4>
-                        <p>Gere facilmente sua senha de acesso a até 100 metros de distância usando nosso aplicativo móvel.</p>
-                    </div>
+            <div data-aos="fade-right" class="col-md-5 image-part">
+                <img src="static/images/slider-image.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--*************** Features Starts Here ***************-->
+<section id="features" class="features container-fluid">
+    <div class="container">
+        <div class="row session-title">
+            <h2>Funcionalidades do Passe Fácil</h2>
+            <p>Conheça as vantagens que o Passe Fácil oferece para facilitar sua vida estudantil.</p>
+        </div>
+        <div class="row feature-row">
+            <div class="col-md-4">
+                <div class="feature-col">
+                   
+                    <h4>Geração de Senha Automática</h4>
+                    <p>Gere facilmente sua senha de acesso a até 100 metros de distância usando nosso aplicativo móvel.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="feature-col">
-                        <i class="fas fa-unlock-alt"></i>
-                        <h4>Desbloqueio Online do Passe</h4>
-                        <p>Desbloqueie seu passe estudantil de forma rápida e segura diretamente pela plataforma online.</p>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-col">
+                   
+                    <h4>Desbloqueio Online do Passe</h4>
+                    <p>Desbloqueie seu passe estudantil de forma rápida e segura diretamente pela plataforma online.</p>
                 </div>
-                <div class="col-md-4">
-                    <div class="feature-col">
-                        <i class="far fa-clock"></i>
-                        <h4>Desbloqueio Online do Passe</h4>
-                        <p>Desbloqueie seu passe estudantil de forma rápida e segura diretamente pela plataforma online.</p>
-                    </div>
-                    </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-col">
+                    
+                    
+                    <h4>Deline do Passesbloqueio On</h4>
+                    <p>Renove automaticamente seu passe estudantil sem precisar ir até um ponto de atendimento físico.</p>
                 </div>
             </div>
         </div>
-    </section>
-    
-    
-
-
-<!--*************** Footer  Starts Here *************** -->
-   <footer id="contact" class="container-fluid">
-       <div class="container">
-
-           <div class="row content-ro">
-             <div class="col-lg-4 col-md-12 footer-form">
-                <h2>About SmartInfo</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer rutrum,
-                  urna eu pellentesque pretium, nisi nisi fermentum enim,
-                  et sagittis dolor nulla vel sapien. Vestibulum sit amet mattis ante.</p>
-                  <p>vehicula pharetra est. Phasellus sagittis turpis diam. Maecenas
-                     faucibus mollis diam, at facilisis  vel</p>
-             </div>
-
-               <div class="col-lg-4 col-md-12 footer-links">
-                  <div class="row no-margin mt-2">
-                   <h2>Quick Links</h2>
-                   <ul>
-                       <li>Home</li>
-                       <li>About Us</li>
-                       <li>Contacts</li>
-                       <li>Pricing</li>
-                       <li>Gallery</li>
-                       <li>eatures</li>
-
-                   </ul>
-                   </div>
-                  <div class="row no-margin mt-1">
-                      <h2 class="m-t-2">More Products</h2>
-                    <ul>
-                       <li>Forum PHP Script</li>
-                       <li>Edu Smart</li>
-                       <li>Smart Event</li>
-                       <li>Smart School</li>
-
-
-                   </ul>
-                  </div>
-
-               </div>
-               <div class="col-lg-4 col-md-12 footer-contact">
-                   <h2>Contact Informatins</h2>
-                   <div class="address-row">
-                       <div class="icon">
-                           <i class="fas fa-map-marker-alt"></i>
-                       </div>
-                       <div class="detail">
-                           <p>46-29 Indra Street, Southernbank, Tigaione, Toranto, 3006 Canada</p>
-                       </div>
-                   </div>
-                   <div class="address-row">
-                       <div class="icon">
-                           <i class="far fa-envelope"></i>
-                       </div>
-                       <div class="detail">
-                           <p>sales@smarteyeapps.com <br> support@smarteyeapps.com</p>
-                       </div>
-                   </div>
-                   <div class="address-row">
-                       <div class="icon">
-                           <i class="fas fa-phone"></i>
-                       </div>
-                       <div class="detail">
-                           <p>+91 9751791203 <br> +91 9159669599</p>
-                       </div>
-                   </div>
-               </div>
-
-           </div>
-           <div class="footer-copy">
-               <div class="row">
-                   <div class="col-lg-8 col-md-6">
-                       <p>Copyright © <a href="https://www.smarteyeapps.com">Smarteyeapps.com</a> | All right reserved.</p>
-                   </div>
-                   <div class="col-lg-4 col-md-6 socila-link">
-                       <ul>
-                           <li><a><i class="fab fa-github"></i></a></li>
-                           <li><a><i class="fab fa-google-plus-g"></i></a></li>
-                           <li><a><i class="fab fa-pinterest-p"></i></a></li>
-                           <li><a><i class="fab fa-twitter"></i></a></li>
-                           <li><a><i class="fab fa-facebook-f"></i></a></li>
-                       </ul>
-                   </div>
-               </div>
-           </div>
-       </div>
-   </footer>
-
-</body>
-<script>
-    
-    document.addEventListener("DOMContentLoaded", function() {
-        var image = document.querySelector(".image-part img");
-        image.classList.add("float");
-    });
-    </script>
-    
-    <script src="stataic/js/jquery-3.2.1.min.js"></script>
-    <script src="stataic/js/popper.min.js"></script>
-    <script src="static/js/bootstrap.min.js"></script>
-    <script src="static/plugins/owl/owl.carousel.min.js"></script>
-    <script src="static/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
-    <script src="static/js/script.js"></script>
-</html>
+    </div>
+</section>
+{% endblock content %}

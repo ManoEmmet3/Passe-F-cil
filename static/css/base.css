@@ -1,0 +1,95 @@
+/* estilo.css */
+
+header#menu-jk {
+    background-color: #008374; /* Cor de fundo do cabeçalho */
+    padding: 10px 0; /* Espaçamento interno no cabeçalho */
+}
+
+header#menu-jk .logo h1 {
+    color: #ffffff; /* Cor do texto do logo */
+    font-size: 1.5rem; /* Tamanho da fonte do logo */
+    margin: 0; /* Remover margens do logo */
+}
+
+header#menu-jk .small-menu {
+    cursor: pointer;
+    font-size: 1.5rem; /* Tamanho do ícone do menu pequeno */
+    color: #ffffff; /* Cor do ícone do menu pequeno */
+    display: none; /* Esconder ícone do menu pequeno por padrão */
+}
+
+header#menu-jk .navigation .nav {
+    list-style: none; /* Remover marcadores da lista */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end; /* Alinhar itens do menu à direita */
+}
+
+header#menu-jk .navigation .nav-item {
+    margin-left: 20px; /* Espaçamento entre os itens do menu */
+}
+
+header#menu-jk .navigation .nav-link {
+    color: #ffffff; /* Cor dos links do menu */
+    text-decoration: none; /* Remover sublinhado dos links */
+    font-size: 1rem; /* Tamanho da fonte dos links */
+    transition: color 0.3s; /* Transição suave para mudança de cor */
+}
+
+header#menu-jk .navigation .nav-link:hover {
+    color: #ffcc00; /* Cor dos links ao passar o mouse */
+}
+
+@media (max-width: 992px) {
+   
+
+    header#menu-jk .navigation {
+        display: none; /* Esconder menu de navegação em telas pequenas */
+        flex-direction: column; /* Mudar direção do flex para coluna */
+        width: 100%; /* Largura total */
+        background-color: #004080; /* Cor de fundo do menu */
+        position: absolute; /* Menu sobreposto ao conteúdo */
+        top: 60px; /* Ajustar posição abaixo do cabeçalho */
+        left: 0;
+        z-index: 1000; /* Garantir que o menu fique sobreposto */
+    }
+
+    header#menu-jk .navigation.active {
+        display: flex; /* Mostrar menu de navegação quando ativo */
+    }
+
+    header#menu-jk .nav-item {
+        margin: 10px 0; /* Espaçamento entre os itens do menu em telas pequenas */
+        text-align: center; /* Centralizar texto dos itens do menu */
+    }
+}
+
+@media (min-width: 992px) {
+    header#menu-jk .small-menu {
+        display: none; /* Esconder ícone do menu pequeno em telas grandes */
+    }
+}
+/* estilo.css */
+
+footer#contact {
+    background-color: #008374; /* Cor de fundo do rodapé */
+    padding: 20px 0; /* Espaçamento interno no rodapé */
+    color: #ffffff; /* Cor do texto */
+}
+
+footer#contact p {
+    margin: 0; /* Remover margens do texto */
+    font-size: 1rem; /* Tamanho da fonte do texto */
+    text-align: center; /* Centralizar texto */
+}
+
+@media (max-width: 992px) {
+    footer#contact {
+        padding: 15px 0; /* Ajustar espaçamento interno em telas pequenas */
+    }
+
+    footer#contact p {
+        font-size: 0.9rem; /* Tamanho da fonte do texto em telas pequenas */
+    }
+}

@@ -1,12 +1,5 @@
-$( document ).ready(function() {
-    var w = window.innerWidth;
 
-    if(w > 767){
-        $('#menu-jk').scrollToFixed();
-    }else{
-        $('#menu-jk').scrollToFixed();
-    }
-
-     $("#owl-demo").owlCarousel();
-
-})
+document.addEventListener("DOMContentLoaded", function() {
+    var image = document.querySelector(".image-part img");
+    image.classList.add("float");
+});
