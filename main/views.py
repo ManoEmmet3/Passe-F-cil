@@ -11,3 +11,14 @@ def landing_page(request):
 
 def login_view(request):
     return render(request, 'login.html')
+
+
+
+def tela_principal(request):
+    return render(request, 'tela_principal.html')
+
+
+def Enviar_documentos(request):
+    return render(request, 'Enviar_documentos.html')
+
+

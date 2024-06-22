@@ -1,5 +1,8 @@
 /* estilo.css */
 
+header{
+   width: 100vw; 
+}
 header#menu-jk {
     background-color: #008374; /* Cor de fundo do cabeçalho */
     padding: 10px 0; /* Espaçamento interno no cabeçalho */

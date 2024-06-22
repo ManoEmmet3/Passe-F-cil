@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/Enviar_documentos.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
+    <div class="wrapper wrapper--w680">
+        <div class="card card-4">
+            <div class="card-body">
+                <h2 class="title">Envio de Documentos para Desbloqueio do Passe Estudantil</h2>
+                <form method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label for="declaracao_escolar" class="label file-label">
+                                    <i class="zmdi zmdi-attachment-alt"></i> <span>Declaração Escolar</span>
+                                </label>
+                                <input id="declaracao_escolar" class="file-input" type="file" name="declaracao_escolar">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label for="comprovante_endereco" class="label file-label">
+                                    <i class="zmdi zmdi-attachment-alt"></i> <span>Comprovante de Endereço</span>
+                                </label>
+                                <input id="comprovante_endereco" class="file-input" type="file" name="comprovante_endereco">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label for="carteira_estudante_frente" class="label file-label">
+                                    <i class="zmdi zmdi-attachment-alt"></i> <span>Carteira de Estudante (Frente)</span>
+                                </label>
+                                <input id="carteira_estudante_frente" class="file-input" type="file" name="carteira_estudante_frente">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label for="carteira_estudante_verso" class="label file-label">
+                                    <i class="zmdi zmdi-attachment-alt"></i> <span>Carteira de Estudante (Verso)</span>
+                                </label>
+                                <input id="carteira_estudante_verso" class="file-input" type="file" name="carteira_estudante_verso">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label for="rg_frente" class="label file-label">
+                                    <i class="zmdi zmdi-attachment-alt"></i> <span>RG (Frente)</span>
+                                </label>
+                                <input id="rg_frente" class="file-input" type="file" name="rg_frente">
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="input-group">
+                                <label for="rg_verso" class="label file-label">
+                                    <i class="zmdi zmdi-attachment-alt"></i> <span>RG (Verso)</span>
+                                </label>
+                                <input id="rg_verso" class="file-input" type="file" name="rg_verso">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-t-15">
+                        <button class="btn btn--radius-2 btn--blue" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
