@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Login - Passe Fácil{% endblock %}
+
+{% block content %}
+<div class="login-container">
+    <h2>Login</h2>
+    <form action="/login" method="post">
+        <input type="email" id="email" name="email" placeholder="Email" required><br>
+        <input type="password" id="password" name="password" placeholder="Senha" required><br>
+        <input type="submit" value="Login">
+    </form>
+</div>
+{% endblock %}
