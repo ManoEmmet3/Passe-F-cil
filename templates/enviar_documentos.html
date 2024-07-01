@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/enviar_documentos.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="page-content" style="margin: 0;">
+    <div class="wizard-v10-content">
+        <div class="wizard-form">
+            <div class="wizard-header">
+                <h3><br></h3>
+            </div>
+            <form class="form-register" action="#" method="post">
+                <div id="form-total">
+                    <!-- SECTION 1 -->
+                    <h2>1</h2>
+                    <section>
+                        <div class="inner">
+                            <div class="form-row" >
+                                <div class="form-holder form-holder-2">
+                                    <label for="declaracao-escolar">Declaração Escolar</label>
+                                    <input type="file" class="form-control" id="declaracao-escolar" name="declaracao-escolar" accept=".pdf,.jpg,.jpeg,.png">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-holder form-holder-2">
+                                    <label for="comprovante-residencia">Comprovante de Residência</label>
+                                    <input type="file" class="form-control" id="comprovante-residencia" name="comprovante-residencia" accept=".pdf,.jpg,.jpeg,.png">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- SECTION 2 -->
+                    <h2>2</h2>
+                    <section>
+                        <div class="inner">
+                            <div class="form-row">
+                                <div class="form-holder form-holder-2">
+                                    <label for="carteira-frente">Carteira de Estudante (Frente)</label>
+                                    <input type="file" id="carteira-frente" name="carteira-frente" accept=".pdf,.jpg,.jpeg,.png">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-holder form-holder-2">
+                                    <label for="carteira-verso">Carteira de Estudante (Verso)</label>
+                                    <input type="file" id="carteira-verso" name="carteira-verso" accept=".pdf,.jpg,.jpeg,.png">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- SECTION 3 -->
+                    <h2>3</h2>
+                    <section>
+                        <div class="inner">
+                            <div class="form-row">
+                                <div class="form-holder form-holder-2">
+                                    <label for="rg-frente">RG (Frente)</label>
+                                    <input type="file" id="rg-frente" name="rg-frente" accept=".pdf,.jpg,.jpeg,.png">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-holder form-holder-2">
+                                    <label for="rg-verso">RG (Verso)</label>
+                                    <input type="file" id="rg-verso" name="rg-verso" accept=".pdf,.jpg,.jpeg,.png">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'js/jqueryy-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/jqueryy-3.3.1.min.js' %}"></script>
+<script src="{% static 'js/jquery.steps.js' %}"></script>
+<script src="{% static 'js/teste.js' %}"></script>
+
+{% endblock %}

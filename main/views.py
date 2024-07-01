@@ -18,7 +18,7 @@ def tela_principal(request):
     return render(request, 'tela_principal.html')
 
 
-def Enviar_documentos(request):
-    return render(request, 'Enviar_documentos.html')
+def enviar_documentos(request):
+    return render(request, 'enviar_documentos.html')
 
 
