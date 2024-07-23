@@ -3,7 +3,7 @@
 {% load static %}
 
 {% block extra_css %}
-    <link rel="stylesheet" href="{% static 'css/landing_page.css' %}">
+<link rel="stylesheet" href="{% static 'css/landing_page.css' %}">
 {% endblock %}
 
 {% block content %}
@@ -12,10 +12,14 @@
         <div class="row">
             <div data-aos="fade-left" class="col-md-7 text-part">
                 <h1>Cadastre-se agora e junte-se à nossa comunidade</h1>
-                <p>Bem-vindo ao Passe Fácil! Nossa plataforma é a sua melhor amiga quando se trata de desbloquear seu passe estudantil. Somos feitos para estudantes como você, que precisam de um jeito fácil e rápido para garantir o transporte e acessar serviços essenciais. Com o Passe Fácil, você pode gerenciar tudo isso de maneira simples e sem complicações. Não perca tempo, cadastre-se agora e veja como é fácil fazer parte da nossa comunidade incrível!</p>
+                <p>Bem-vindo ao Passe Fácil! Nossa plataforma é a sua melhor amiga quando se trata de desbloquear seu
+                    passe estudantil. Somos feitos para estudantes como você, que precisam de um jeito fácil e rápido
+                    para garantir o transporte e acessar serviços essenciais. Com o Passe Fácil, você pode gerenciar
+                    tudo isso de maneira simples e sem complicações. Não perca tempo, cadastre-se agora e veja como é
+                    fácil fazer parte da nossa comunidade incrível!</p>
                 <div class="down-row">
                     <a href="{% url 'login' %}" class="btn">Iniciar Sessão</a>
-                    <a href="register.html" class="btn">Registro</a>
+                    <a href="{% url 'tela_principal' %}"" class="btn">Registro</a>
                 </div>
             </div>
             <div data-aos="fade-right" class="col-md-5 image-part">
@@ -35,21 +39,22 @@
         <div class="row feature-row">
             <div class="col-md-4">
                 <div class="feature-col">
-                   
+
                     <h4>Geração de Senha Automática</h4>
-                    <p>Gere facilmente sua senha de acesso a até 100 metros de distância usando nosso aplicativo móvel.</p>
+                    <p>Gere facilmente sua senha de acesso a até 100 metros de distância usando nosso aplicativo móvel.
+                    </p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="feature-col">
-                   
+
                     <h4>Desbloqueio Online do Passe</h4>
                     <p>Desbloqueie seu passe estudantil de forma rápida e segura diretamente pela plataforma online.</p>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="feature-col">
-                    
+
                     <h4>Renovação Automática do Passe</h4>
                     <p>Renove automaticamente seu passe estudantil utilizando nosso aplicativo móvel.</p>
                 </div>
