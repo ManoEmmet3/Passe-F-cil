@@ -1,0 +1,23 @@
+body {
+    background-color: #008374;
+}
+
+.card {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+button {
+    margin-right: 10px;
+}
+
+.btn-custom {
+    background-color: #008374;
+    color: white;
+    border: none;
+}
+
+.btn-custom:hover {
+    background-color: #006b5f;
+}

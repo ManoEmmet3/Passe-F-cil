@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+{% block extra_js %}
+<link rel="stylesheet" href="{% static 'css/gerar_senha.js' %}">
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/gerar_senha.css' %}">
+{% endblock %}
+
+{% block content %}
+<body>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3>Gerador de Senhas de Espera</h3>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label for="senha">Senha Gerada:</label>
+                        <input type="text" class="form-control" id="senha" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="dataHora">Data e Hora:</label>
+                        <input type="text" class="form-control" id="dataHora" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="local">Exibido em:</label>
+                        <input type="text" class="form-control" id="local" value="Teresina/PI" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="aviso">Aviso:</label>
+                        <textarea class="form-control" id="aviso" rows="3" readonly>Se sua senha for chamada e você não estiver no local, uma nova senha deverá ser emitida.</textarea>
+                    </div>
+                    <button type="button" class="btn btn-custom" onclick="gerarSenha()">Gerar Senha</button>
+                    <button type="button" class="btn btn-secondary" onclick="limparCampos()">Limpar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% endblock %}
