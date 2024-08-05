@@ -21,5 +21,6 @@ def tela_principal(request):
 def enviar_documentos(request):
     return render(request, 'enviar_documentos.html')
 
-
+def gerar_senha(request):
+    return render(request, 'gerar_senha.html')
 
