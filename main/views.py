@@ -24,3 +24,4 @@ def enviar_documentos(request):
 def gerar_senha(request):
     return render(request, 'gerar_senha.html')
 
+

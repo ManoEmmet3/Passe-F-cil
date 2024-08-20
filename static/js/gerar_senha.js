@@ -1,30 +1,26 @@
-document.addEventListener('DOMContentLoaded', (event) => {
-    if (!localStorage.getItem('senhaCounterA')) {
-        localStorage.setItem('senhaCounterA', 0);
-    }
-    if (!localStorage.getItem('senhaCounterC')) {
-        localStorage.setItem('senhaCounterC', 0);
-    }
-});
-
+// Função para gerar uma senha aleatória
 function gerarSenha() {
-    let prefixo = (Math.random() < 0.5) ? 'A' : 'C';
-    let contador = parseInt(localStorage.getItem(`senhaCounter${prefixo}`)) + 1;
+    var senha = "";
+    var caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    var comprimento = 6; // Definindo o comprimento da senha
 
-    localStorage.setItem(`senhaCounter${prefixo}`, contador);
+    for (var i = 0; i < comprimento; i++) {
+        var randomIndex = Math.floor(Math.random() * caracteres.length);
+        senha += caracteres.charAt(randomIndex);
+    }
 
-    const senha = `${prefixo}${String(contador).padStart(4, '0')}`;
+    // Preenche o campo de senha com a senha gerada
+    document.getElementById("senha").value = senha;
 
-    const agora = new Date();
-    const dataHora = agora.toLocaleString('pt-BR');
-
-    document.getElementById('senha').value = senha;
-    document.getElementById('dataHora').value = dataHora;
+    // Preenche o campo de data e hora com o valor atual
+    var agora = new Date();
+    var dataHoraFormatada = agora.toLocaleString();
+    document.getElementById("dataHora").value = dataHoraFormatada;
 }
 
+// Função para limpar os campos do formulário
 function limparCampos() {
-    document.getElementById('senha').value = '';
-    document.getElementById('dataHora').value = '';
-    document.getElementById('local').value = 'Teresina/PI';
-    document.getElementById('aviso').value = 'Se sua senha for chamada e você não estiver no local, uma nova senha deverá ser emitida.';
+    document.getElementById("senha").value = "";
+    document.getElementById("dataHora").value = "";
+    document.getElementById("aviso").value = "Se sua senha for chamada e você não estiver no local, uma nova senha deverá ser emitida.";
 }

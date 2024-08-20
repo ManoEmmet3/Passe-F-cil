@@ -777,8 +777,7 @@ function paginationClick(wizard, options, state, index)
  * @event click
  * @param event {Object} An event object
  */
-function paginationClickHandler(event)
-{
+function paginationClickHandler(event) {
     event.preventDefault();
 
     var anchor = $(this),
@@ -787,14 +786,16 @@ function paginationClickHandler(event)
         state = getState(wizard),
         href = anchor.attr("href");
 
-    switch (href.substring(href.lastIndexOf("#") + 1))
-    {
+    switch (href.substring(href.lastIndexOf("#") + 1)) {
         case "cancel":
             cancel(wizard);
             break;
 
         case "finish":
             finishStep(wizard, state);
+            // Redireciona para a URL desejada
+            var redirectUrl = "{% url 'tela_principal' %}"; // Ajuste a URL conforme necessário
+            window.location.href = redirectUrl;
             break;
 
         case "next":

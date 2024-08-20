@@ -8,13 +8,13 @@ $(function(){
         transitionEffectSpeed: 500,
         titleTemplate : '<span class="title">#title#</span>',
         labels: {
-            previous : 'Previous',
-            next : 'Next Step',
+            previous : 'step',
+            next : 'Step',
             finish : 'Confirm',
-            current : ''
         },
-        onFinished: function (event, currentIndex) {
-            $('#success-message').show(); // Exibe a mensagem de sucesso ao concluir o formulário
-        }
     });
+});
+
+$(document).ready(function() {
+    $(".pagination-buttons a").on("click", paginationClickHandler);
 });
